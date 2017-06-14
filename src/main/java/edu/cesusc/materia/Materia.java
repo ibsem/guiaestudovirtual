@@ -1,4 +1,4 @@
-package edu.cesusc.conteudo;
+package edu.cesusc.materia;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,21 +10,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="conteudo")
-public class Conteudo {
+@Table(name="materia")
+public class Materia {
 	
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
 	private Integer id;
-	@Column(name = "id_materia")
-	private Integer id_materia;
+	@Column(name = "id_curso")
+	private Integer id_curso;
 	@Column(name = "nome", updatable = false)
 	private String nome;
 	@org.hibernate.annotations.NaturalId
 	
 	@ManyToOne
-	@JoinTable (name = "materia", joinColumns = { @JoinColumn( name = "id_materia",
+	@JoinTable (name = "curso", joinColumns = { @JoinColumn( name = "id_curso",
 		referencedColumnName = "id")})
 	public Integer getId() {
 		return id;
@@ -35,12 +35,12 @@ public class Conteudo {
 	}
 
 	
-	public Integer getId_materia() {
-		return id_materia;
+	public Integer getId_curso() {
+		return id_curso;
 	}
 
 	public void setId_tipo_cont(Integer id_materia) {
-		this.id_materia = id_materia;
+		this.id_curso = id_materia;
 	}
 
 	public String getNome() {
