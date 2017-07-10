@@ -6,7 +6,7 @@ import org.hibernate.Session;
 
 
 
-import edu.cesusc.conteudo.Conteudo;
+import edu.cesusc.anotacoes.Anotacoes;
 
 
 
@@ -19,36 +19,36 @@ public class AnotacoesDAOHibernate implements AnotacoesDAO {
 	}
 
 	@Override
-	public void inserir(Conteudo conteudo) {
-		this.session.save(conteudo);
+	public void inserir(Anotacoes anotacoes) {
+		this.session.save(anotacoes);
 		}
 
-	public void salvar(Conteudo conteudo) {
-		this.session.save(conteudo);
+	public void salvar(Anotacoes anotacoes) {
+		this.session.save(anotacoes);
 	}
 	@Override
-	public void altera(Conteudo conteudo) {
-		this.session.update(conteudo);
+	public void altera(Anotacoes anotacoes) {
+		this.session.update(anotacoes);
 		
 	}
 
 	@Override
-	public void excluir(Conteudo conteudo) {
-		this.session.delete(conteudo);
+	public void excluir(Anotacoes anotacoes) {
+		this.session.delete(anotacoes);
 		
 	}
-	public Conteudo carregar(Integer id_conteudo) {
-		return (Conteudo) this.session.get(Conteudo.class, id_conteudo);
+	public Anotacoes carregar(Integer id_anotacoes) {
+		return (Anotacoes) this.session.get(Anotacoes.class, id_anotacoes);
 	}
 
 	@Override
-	public List<Conteudo> listar() {
-		return this.session.createCriteria(Conteudo.class).list();
+	public List<Anotacoes> listar() {
+		return this.session.createCriteria(Anotacoes.class).list();
 	
 	}
 
 	@Override
-	public void exibir(Conteudo conteudo) {
+	public void exibir(Anotacoes anotacoes) {
 		// TODO Auto-generated method stub
 		
 	}

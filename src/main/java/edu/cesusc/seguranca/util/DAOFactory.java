@@ -1,7 +1,10 @@
 package edu.cesusc.seguranca.util;
-import edu.cesusc.seguranca.usuario.*;
+import edu.cesusc.anotacoes.AnotacoesDAO;
 import edu.cesusc.conteudo.ConteudoDAO;
 import edu.cesusc.conteudo.ConteudoDAOHibernate;
+import edu.cesusc.curso.CursoDAO;
+import edu.cesusc.seguranca.usuario.UsuarioDAO;
+import edu.cesusc.seguranca.usuario.UsuarioDAOHibernate;
 public class DAOFactory {
 
 	public static UsuarioDAO criarUsuarioDAO() {
@@ -13,5 +16,13 @@ public class DAOFactory {
 		ConteudoDAOHibernate conteudoDAO = new ConteudoDAOHibernate();
 		conteudoDAO.setSession(HibernateUtil.getSessionFactory().getCurrentSession());
 		return conteudoDAO; 
+	}
+	public static AnotacoesDAO criarAnotacoesDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static CursoDAO criarCursoDAO() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -3,36 +3,36 @@ package edu.cesusc.anotacoes;
 import java.util.List;
 
 import edu.cesusc.seguranca.util.DAOFactory;
-import edu.cesusc.conteudo.Conteudo;
-import edu.cesusc.conteudo.ConteudoDAO;
+import edu.cesusc.anotacoes.Anotacoes;
+import edu.cesusc.anotacoes.AnotacoesDAO;
 
 public class AnotacoesRN {
 	
-	private ConteudoDAO conteudoDAO;
+	private AnotacoesDAO anotacoesDAO;
 
 		public AnotacoesRN() {
-			this.conteudoDAO = DAOFactory.criarConteudoDAO();
+			this.anotacoesDAO = DAOFactory.criarAnotacoesDAO();
 		}
 
-		public Conteudo carregar(Integer codigo) {
-			return this.conteudoDAO.carregar(codigo);
+		public Anotacoes carregar(Integer codigo) {
+			return this.anotacoesDAO.carregar(codigo);
 		}
 
-		public void salvar(Conteudo conteudo) {
-			Integer codigo = conteudo.getId();
+		public void salvar(Anotacoes anotacoes) {
+			Integer codigo = anotacoes.getId();
 			if (codigo == null || codigo == 0) {
-				this.conteudoDAO.salvar(conteudo);
+				this.anotacoesDAO.salvar(anotacoes);
 			} else {
-				this.conteudoDAO.exibir(conteudo);
+				this.anotacoesDAO.exibir(anotacoes);
 			}
 		}
 
-		public void excluir(Conteudo servico) {
-			this.conteudoDAO.excluir(servico);
+		public void excluir(Anotacoes servico) {
+			this.anotacoesDAO.excluir(servico);
 		}
 
-		public List<Conteudo> listar() {
-			return this.conteudoDAO.listar();
+		public List<Anotacoes> listar() {
+			return this.anotacoesDAO.listar();
 		}
 
 }

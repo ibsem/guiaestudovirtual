@@ -3,18 +3,18 @@ package edu.cesusc.curso;
 import java.util.List;
 
 import edu.cesusc.seguranca.util.DAOFactory;
-import edu.cesusc.curso.Conteudo;
-import edu.cesusc.curso.ConteudoDAO;
+import edu.cesusc.curso.Curso;
+import edu.cesusc.curso.CursoDAO;
 
 public class CursoRN {
 	
-	private MateriaDAO cursoDAO;
+	private CursoDAO cursoDAO;
 
-		public ConteudoRN() {
-			this.cursoDAO = DAOFactory.criarConteudoDAO();
+		public CursoRN() {
+			this.cursoDAO = DAOFactory.criarCursoDAO();
 		}
 
-		public Conteudo carregar(Integer codigo) {
+		public Curso carregar(Integer codigo) {
 			return this.cursoDAO.carregar(codigo);
 		}
 
@@ -27,11 +27,11 @@ public class CursoRN {
 			}
 		}
 
-		public void excluir(Conteudo servico) {
+		public void excluir(Curso servico) {
 			this.cursoDAO.excluir(servico);
 		}
 
-		public List<Conteudo> listar() {
+		public List<Curso> listar() {
 			return this.cursoDAO.listar();
 		}
 

@@ -46,21 +46,62 @@ public class Anotacoes {
 	public void setId(Integer id) {
 		this.id= id;
 	}
-
 	public Integer getId_anotacoes() {
 		return id_anotacoes;
 	}
-
-	public void setId_tipo_cont(Integer id_anexos) {
-		this.id_curso = id_anexos;
+	public void setId_anotacoes(Integer id_anotacoes) {
+		this.id_anotacoes = id_anotacoes;
 	}
-
-	public String gettexto() {
+	public Integer getId_anexos() {
+		return id_anexos;
+	}
+	public void setId_anexos(Integer id_anexos) {
+		this.id_anexos = id_anexos;
+	}
+	public Integer getId_imagens() {
+		return id_imagens;
+	}
+	public void setId_imagens(Integer id_imagens) {
+		this.id_imagens = id_imagens;
+	}
+	public Integer getTexto() {
 		return texto;
 	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTexto(Integer texto) {
+		this.texto = texto;
+	}
+	public Integer getId_mapa() {
+		return id_mapa;
+	}
+	public void setId_mapa(Integer id_mapa) {
+		this.id_mapa = id_mapa;
+	}
+	public Integer getId_texto() {
+		return id_texto;
+	}
+	public void setId_texto(Integer id_texto) {
+		this.id_texto = id_texto;
+	}
+	public Integer getId_imagem() {
+		return id_imagem;
+	}
+	public void setId_imagem(Integer id_imagem) {
+		this.id_imagem = id_imagem;
+	}
+	public Integer getId_anexo() {
+		return id_anexo;
+	}
+	public void setId_anexo(Integer id_anexo) {
+		this.id_anexo = id_anexo;
+	}
+	public Integer getId_usuario() {
+		return id_usuario;
+	}
+	public void setId_usuario(Integer id_usuario) {
+		this.id_usuario = id_usuario;
+	}
+	public Integer getId() {
+		return id;
 	}
 
 }

@@ -6,7 +6,7 @@ import org.hibernate.Session;
 
 
 
-import edu.cesusc.conteudo.Curso;
+import edu.cesusc.curso.Curso;
 
 
 
@@ -19,26 +19,26 @@ public class CursoDAOHibernate implements CursoDAO {
 	}
 
 	@Override
-	public void inserir(Curso conteudo) {
-		this.session.save(conteudo);
+	public void inserir(Curso curso) {
+		this.session.save(curso);
 		}
 
-	public void salvar(Curso conteudo) {
-		this.session.save(conteudo);
+	public void salvar(Curso curso) {
+		this.session.save(curso);
 	}
 	@Override
-	public void altera(Curso conteudo) {
-		this.session.update(conteudo);
+	public void altera(Curso curso) {
+		this.session.update(curso);
 		
 	}
 
 	@Override
-	public void excluir(Curso conteudo) {
-		this.session.delete(conteudo);
+	public void excluir(Curso curso) {
+		this.session.delete(curso);
 		
 	}
-	public Curso carregar(Integer id_conteudo) {
-		return (Curso) this.session.get(Curso.class, id_conteudo);
+	public Curso carregar(Integer id_curso) {
+		return (Curso) this.session.get(Curso.class, id_curso);
 	}
 
 	@Override
@@ -48,7 +48,7 @@ public class CursoDAOHibernate implements CursoDAO {
 	}
 
 	@Override
-	public void exibir(Curso Conteudo) {
+	public void exibir(Curso Curso) {
 		// TODO Auto-generated method stub
 		
 	}
